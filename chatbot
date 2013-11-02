@@ -341,7 +341,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat(" /me ²w² Bot ON !!");
+    return API.sendChat("/me ²w² Bot ON !!");
   };
 
   populateUserData = function() {
