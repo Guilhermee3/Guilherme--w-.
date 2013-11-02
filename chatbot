@@ -369,8 +369,10 @@
     return data.startAfkInterval();
   };
 
-  afkCheck = function() {
-    var DJs, id, lastActivity, lastWarned, now, oneMinute, secsLastActive, timeSinceLastActivity, timeSinceLastWarning, twoMinutes, user, warnMsg, _ref, _results;
+   afkCheck = function() {
+    var DJs, id, lastActivity, lastWarned, now, oneMinute, secsLastActive, timeSinceLastActivity, timeSinceLastWarning, 
+
+twoMinutes, user, warnMsg, _ref, _results;
     _ref = data.users;
     _results = [];
     for (id in _ref) {
@@ -383,15 +385,19 @@
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
             user.warn();
-            _results.push(API.sendChat("@" + user.getUser().username + ", Voce nao mostrou atividade votando ou falando no chat. Fale ou vote dentro de 2 minutos ou sera removido da cabine."));
+            _results.push(API.sendChat("@" + user.getUser().username + ", Eu não vi você  votar em pelo menos 12 minutos. 
+
+Você está AFK? Se você não votar em 2 minutos eu vou removê-lo."));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
-            twoMinutes = 7 * 60 * 1000;
+            twoMinutes = 2 * 60 * 1000;
             if (timeSinceLastWarning > twoMinutes) {
               user.warn();
               warnMsg = "@" + user.getUser().username;
-              warnMsg += ", Você não falou no chat nos ultimos 30 minutos, por favor fale alguma coisa em 4 minutos ou será kickado da line de dj.";
+              warnMsg += ",Eu não vi você votar em pelo menos 14 minutos agora. Este é o seu segundo e último aviso. Se você 
+
+não votar no minuto seguinte, vou removê-lo.";
               _results.push(API.sendChat(warnMsg));
             } else {
               _results.push(void 0);
@@ -403,7 +409,9 @@
             if (timeSinceLastWarning > oneMinute) {
               DJs = API.getDJs();
               if (DJs.length > 0 && DJs[0].id !== user.getUser().id) {
-                API.sendChat("@" + user.getUser().username + ", você foi avisado, fique ativo enquanto está na line.");
+                API.sendChat("@" + user.getUser().username + ",Você teve 2 avisos. Por favor, continue votando para continuar 
+
+na lista.");
                 API.moderateRemoveDJ(id);
                 _results.push(user.warn());
               } else {
@@ -435,9 +443,9 @@
       'seconds': 0
     };
     ms = {
-      'day': 5 * 60 * 60 * 1000,
-      'hour': 5 * 60 * 1000,
-      'minute': 5 * 1000,
+      'day': 24 * 60 * 60 * 1000,
+      'hour': 60 * 60 * 1000,
+      'minute': 60 * 1000,
       'second': 1000
     };
     if (msTime > ms['day']) {
@@ -473,6 +481,7 @@
       return false;
     }
   };
+
 
   Command = (function() {
     function Command(msgData) {
