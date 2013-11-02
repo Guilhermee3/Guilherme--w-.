@@ -709,7 +709,7 @@
 
     themeCommand.prototype.functionality = function() {
       var msg;
-      msg = "Temas permitidos aqui na sala. dubstep , trap , house , techno , hardstyle , trance , electro...";
+      msg = "Temas permitidos aqui na sala Eletronic Dance Music BR ϟ :  dubstep , trap , house , techno , hardstyle , trance , electro...";
       return API.sendChat(msg);
     };
 
@@ -757,7 +757,7 @@
 
     roomHelpCommand.prototype.functionality = function() {
       var msg1, msg2;
-      msg1 = "Bem vindo a Sala Dubstep, Trap, and Electro (BR)! Para ser o DJ, Criar uma lista de reprodução e coloque Musica do Youtube ou soundcloud. ";
+      msg1 = "Bem vindo a Sala Eletronic Dance Music BR ϟ! Para ser o DJ, Criar uma lista de reprodução e coloque Musica do Youtube ou soundcloud. ";
       msg1 += "Se é novo procure pelo seu nome na sua tela (do lado da cabine de dj e clique) e depois mude o nome.se quiser sabe os tema da sala digite '!tema' ";
       msg2 = "Para Ganhar Pontos é só clica em Bacana. ";
       msg2 += "Se quiser ler as regras digite '!regras'";
