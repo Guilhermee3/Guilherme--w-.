@@ -65,7 +65,7 @@
       {
         interval: 7,
         offset: 0,
-        msg: "Mantenha-se ativo no bate-papo e Votando. Ser não sera Retirado da Lista de DJ e da Cabine!"
+        msg: " /me Mantenha-se ativo no bate-papo e Votando. Ser não sera Retirado da Lista de DJ e da Cabine!"
       }
     ];
 
@@ -341,7 +341,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat(" ²w² Bot ON !!");
+    return API.sendChat(" /me ²w² Bot ON !!");
   };
 
   populateUserData = function() {
