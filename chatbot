@@ -677,7 +677,7 @@
     whyWootCommand.prototype.init = function() {
       this.command = '!ping';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     whyWootCommand.prototype.functionality = function() {
@@ -704,7 +704,7 @@
     themeCommand.prototype.init = function() {
       this.command = '!tema';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     themeCommand.prototype.functionality = function() {
@@ -728,7 +728,7 @@
     rulesCommand.prototype.init = function() {
       this.command = '!regras';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     rulesCommand.prototype.functionality = function() {
@@ -787,7 +787,7 @@
 
     sourceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'BOT criado e editado por bruce, caso queira falar com ele adicione ele no skype blackrockshooter1337';
+      msg = 'BOT criado e editado por Guilherme ²w², caso queira falar com ele adicione ele no skype Guilherme.kitakawa';
       return API.sendChat(msg);
     };
 
@@ -1299,7 +1299,7 @@
     overplayedCommand.prototype.init = function() {
       this.command = '!idiota';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     overplayedCommand.prototype.functionality = function() {
@@ -1368,7 +1368,7 @@
     whyMehCommand.prototype.init = function() {
       this.command = '!autowoot';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     whyMehCommand.prototype.functionality = function() {
