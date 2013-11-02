@@ -341,7 +341,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat("KillerBOT on!!! version 0.0.0");
+    return API.sendChat("Bot ²w² on!!!");
   };
 
   populateUserData = function() {
@@ -787,7 +787,7 @@
 
     sourceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'BOT criado e editado por bruce, caso queira falar com ele adicione ele no skype blackrockshooter1337';
+      msg = 'BOT criado e editado por guilherme.';
       return API.sendChat(msg);
     };
 
