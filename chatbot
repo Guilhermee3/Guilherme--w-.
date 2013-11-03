@@ -685,7 +685,9 @@
       var msg, nameIndex;
       msg = "pong!";
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
-      } else {
+      }
+      }
+      else {
         return API.sendChat(msg);
       }
     };
