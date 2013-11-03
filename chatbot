@@ -733,7 +733,7 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg;
-      msg = "1) Video no Maximo 6:30 minutos. , 2) Sem Flood! , 3) Nao escrever em colorido , 4) Respeitar os Adms e Mods , 5) Nao Fiquem Pedindo Cargos 6) Não toque musicas repetidas , ";
+      msg = "1) Video no Maximo 6:30 minutos. , 2) Sem Flood! , 3) Nao escrever em colorido , 4) Respeitar os Adms e Mods , 5) Nao Fiquem Pedindo Cargos 6) Não toque musicas repetidas 7) Sem video pornografico , ";
       return API.sendChat(msg);
     };
 
@@ -1054,7 +1054,7 @@
     reloadCommand.prototype.init = function() {
       this.command = '!reload';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     reloadCommand.prototype.functionality = function() {
