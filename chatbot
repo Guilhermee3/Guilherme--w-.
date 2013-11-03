@@ -675,6 +675,21 @@
     }
 
     whyWootCommand.prototype.init = function() {
+      this.command = '!autor';
+      this.parseType = 'startsWith';
+      return this.rankPrivelege = 'featured';
+    };
+
+    whyWootCommand.prototype.functionality = function() {
+      var msg, nameIndex;
+      msg = "Este bot foi editado pelo Guilherme ²w²!";
+      if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
+      } else {
+        return API.sendChat(msg);
+      }
+       }
+
+    whyWootCommand.prototype.init = function() {
       this.command = '!ping';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
