@@ -59,13 +59,13 @@
 
     settings.prototype.pupScriptUrl = 'https://raw.github.com/Guilhermee3/Guilherme--w-./master/chatbot';
 
-    settings.prototype.afkTime = 7 * 60 * 1000;
+    settings.prototype.afkTime = 4 * 60 * 1000;
 
     settings.prototype.songIntervalMessages = [
       {
         interval: 7,
         offset: 0,
-        msg: " /me Mantenha-se ativo no bate-papo e Votando. Ser não sera Retirado da Lista de DJ e da Cabine!"
+        msg: "/me Mantenha-se ativo no bate-papo e Votando. Ser não sera Retirado da Lista de DJ e da Cabine!"
       }
     ];
 
@@ -383,7 +383,7 @@
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
             user.warn();
-            _results.push(API.sendChat("@" + user.getUser().username + ", Você não voltou nos ultimos minutos, vote ou sera removido da cabine."));
+            _results.push(API.sendChat("@" + user.getUser().username + ", Você não votou nos ultimos minutos, vote ou sera removido da cabine."));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
