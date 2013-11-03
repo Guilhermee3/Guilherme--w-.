@@ -1,7 +1,7 @@
 $(document).ready(function(){
  
 //When script loads
-API.sendChat("Free fans mode ON!")
+API.sendChat("/me Free fans mode ON!")
 $('#button-vote-positive').click();
  
 //global var
